@@ -38,6 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'property',
+    'agents',
+    'about',
+    'contact',
+    'home',
 ]
 
 MIDDLEWARE = [
@@ -127,3 +131,12 @@ STATICFILES_DIRS = [
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR , 'media')
+
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+DEFAULT_FROM_EMAIL = 'test@gmail.com'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSOWRD = ''
+EMAIL_USE_TLS = False
+EMAIL_PORT = 1025
