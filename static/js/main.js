@@ -337,8 +337,8 @@
 	    animation: "fade",
 	    prevText: "",
 	    nextText: "",
-	    slideshowSpeed: 3000, // speed of slides
-	    animationSpeed: 10000,
+	    slideshowSpeed: 1000, // speed of slides
+	    animationSpeed: 4000,
 	    slideshow: true,
 	    directionNav: false,
 	    controlNav: true
@@ -347,8 +347,8 @@
 	    animation: "fade",
 	    prevText: "",
 	    nextText: "",
-	    slideshowSpeed: 3000, // speed of slides
-	    animationSpeed: 7000,
+	    slideshowSpeed: 1000, // speed of slides
+	    animationSpeed: 4000,
 	    slideshow: true,
 	    directionNav: false,
 	    controlNav: false

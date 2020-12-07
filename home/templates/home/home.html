@@ -40,9 +40,12 @@
       </div>
     </div>
     <ul class="slides">
-      <li style="{% static 'img/slider_1.jpg' %}" class="overlay"></li>
-      <li style="background-image: url(img/slider_4.jpg);" class="overlay"></li>
-      <li style="background-image: url(img/slider_2.jpg);" class="overlay"></li>
+      <li style="background-image: url({% static 'img/homepage1.jpg' %})" class="overlay"></li>
+
+       <li style="background-image: url({% static 'img/homepage2.jpg' %})"  class="overlay"></li>
+
+       <li style="background-image: url({% static 'img/homepage3.jpg' %})"  class="overlay"></li>
+       <li style="background-image: url({% static 'img/homepage4.jpg' %})"  class="overlay"></li>
     </ul>
   </section>
   <!-- END: slider  -->
@@ -57,7 +60,7 @@
             </div>
             <div class="probootstrap-card-text">
               <h2 class="probootstrap-card-heading">Award Winning Brooker</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius non arcu ut interdum. Proin a nunc a metus facilisis mattis. Maecenas placerat bibendum dui, eget lobortis urna laoreet ultricies. Aliquam eu tristique turpis. Morbi mollis egestas quam, vulputate auctor nisl viverra et. Ut commodo velit vel dignissim lacinia</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius non arcu ut interdum.</p>
             </div>
           </div>
         </div>
@@ -68,7 +71,7 @@
             </div>
             <div class="probootstrap-card-text">
               <h2 class="probootstrap-card-heading">New Houses</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius non arcu ut interdum. Proin a nunc a metus facilisis mattis. Maecenas placerat bibendum dui, eget lobortis urna laoreet ultricies. Aliquam eu tristique turpis. Morbi mollis egestas quam, vulputate auctor nisl viverra et. Ut commodo velit vel dignissim lacinia</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius non arcu ut interdum.</p>
             </div>
           </div>
         </div>
@@ -79,7 +82,7 @@
             </div>
             <div class="probootstrap-card-text">
               <h2 class="probootstrap-card-heading">Affordable Houses</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius non arcu ut interdum. Proin a nunc a metus facilisis mattis. Maecenas placerat bibendum dui, eget lobortis urna laoreet ultricies. Aliquam eu tristique turpis. Morbi mollis egestas quam, vulputate auctor nisl viverra et. Ut commodo velit vel dignissim lacinia</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius non arcu ut interdum. </p>
             </div>
           </div>
         </div>
@@ -91,7 +94,7 @@
   <section class="probootstrap-section">
     <div class="container">
       <div class="row heading">
-        <h2 class="mt0 mb50 text-center">Explore Our Neighborhoods</h2>
+        <h2 class="mt0 mb50 text-center">Explore Our Top Cities</h2>
       </div>
       <div class="row probootstrap-gutter10">
         {% for category_list in category_list_home %}
@@ -115,13 +118,7 @@
   </section>
   <!-- END: section -->
 
-  <section class="probootstrap-section probootstrap-bg" style="background-image: url(img/slider_2.jpg);">
-    <div class="container text-center probootstrap-animate" data-animate-effect="fadeIn">
-      <h2 class="heading">Best Home &amp; Properties</h2>
-      <p class="sub-heading">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-      <p><a href="#" class="btn btn-primary mb10">Find out more</a></p>
-    </div>
-  </section>
+ 
   <!-- END: section -->
 
   <section class="probootstrap-section probootstrap-section-lighter">
@@ -136,15 +133,17 @@
           <div class="col-md-4 col-sm-6">
             <div class="probootstrap-card probootstrap-listing">
               <div class="probootstrap-card-media">
-                <img src="{{property.image.url}}" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
+              
+                <img href="{% url 'property:property_list' %}" src="{{property.image.url}}" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
+               
               </div>
               <div class="probootstrap-card-text">
                 <h2 class="probootstrap-card-heading"><a href="#">{{property}}</a></h2>
                 <div class="probootstrap-listing-location">
-                  <i class="icon-location2"></i> <span>360 W Wellington Chicago, IL 60657</span>
+                  <i class="icon-location2"></i> <span>{{property.location}}</span>
                 </div>
                 <div class="probootstrap-listing-category for-sale"><span>for {{property.property_type}}</span></div>
-                <div class="probootstrap-listing-price"><strong>$ {{property.price}}</strong> / month</div>
+                <div class="probootstrap-listing-price"><strong>$ {{property.price}}</strong></div>
               </div>
               <div class="probootstrap-card-extra">
                 <ul>
@@ -191,14 +190,14 @@
           <div class="service text-center">
             <div class="icon"><i class="icon-list2"></i></div>
             <h2 class="heading">Property Listing</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius non arcu ut interdum.</p>
           </div>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 probootstrap-animate">
           <div class="service text-center">
             <div class="icon"><i class="icon-power-cord"></i></div>
             <h2 class="heading">Property Management</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius non arcu ut interdum.</p>
           </div>
         </div>
         <div class="clearfix visible-sm-block"></div>
@@ -206,7 +205,7 @@
           <div class="service text-center">
             <div class="icon"><i class="icon-price-tag2"></i></div>
             <h2 class="heading">Renting Properties</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius non arcu ut interdum.</p>
           </div>
         </div>
         <div class="clearfix visible-lg-block visible-md-block"></div>
@@ -214,7 +213,7 @@
           <div class="service text-center">
             <div class="icon"><i class="icon-direction"></i></div>
             <h2 class="heading">Selling Properties</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius non arcu ut interdum.</p>
           </div>
         </div>
         <div class="clearfix visible-sm-block"></div>
@@ -222,14 +221,14 @@
           <div class="service text-center">
             <div class="icon"><i class="icon-home3"></i></div>
             <h2 class="heading">Brook A Property</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius non arcu ut interdum.</p>
           </div>
         </div>
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 probootstrap-animate">
           <div class="service text-center">
             <div class="icon"><i class="icon-magnifying-glass"></i></div>
             <h2 class="heading">Search Property</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius non arcu ut interdum.</p>
           </div>
         </div>
         <div class="clearfix visible-lg-block visible-md-block"></div>
