@@ -19,7 +19,7 @@
                     
                     <div class="search-field">
                       <i class="icon-location2"></i>
-                      <input type="text" name='q' class="form-control" placeholder="Enter address">
+                      <input type="text" name="q" class="form-control" placeholder="Enter City">
                     </div>
                     <div class="search-category">
                       <i class="icon-chevron-down"></i>
@@ -40,7 +40,7 @@
       </div>
     </div>
     <ul class="slides">
-      <li style="background-image: url(img/slider_1.jpg);" class="overlay"></li>
+      <li style="{% static 'img/slider_1.jpg' %}" class="overlay"></li>
       <li style="background-image: url(img/slider_4.jpg);" class="overlay"></li>
       <li style="background-image: url(img/slider_2.jpg);" class="overlay"></li>
     </ul>
@@ -53,12 +53,11 @@
         <div class="col-md-4">
           <div class="probootstrap-card text-center probootstrap-animate">
             <div class="probootstrap-card-media svg-sm colored">
-              <img src="{% static 'img/flaticon/svg/001-prize.svg' %}" class="svg" alt="Free HTML5 Template by uicookies.com">
+              <img src="{% static 'img/flaticon/svg/001-prize.svg' %}"  class="svg" alt="Free HTML5 Template by uicookies.com">
             </div>
             <div class="probootstrap-card-text">
               <h2 class="probootstrap-card-heading">Award Winning Brooker</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-              <p><a href="#">Find out more</a></p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius non arcu ut interdum. Proin a nunc a metus facilisis mattis. Maecenas placerat bibendum dui, eget lobortis urna laoreet ultricies. Aliquam eu tristique turpis. Morbi mollis egestas quam, vulputate auctor nisl viverra et. Ut commodo velit vel dignissim lacinia</p>
             </div>
           </div>
         </div>
@@ -69,8 +68,7 @@
             </div>
             <div class="probootstrap-card-text">
               <h2 class="probootstrap-card-heading">New Houses</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-              <p><a href="#">Find out more</a></p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius non arcu ut interdum. Proin a nunc a metus facilisis mattis. Maecenas placerat bibendum dui, eget lobortis urna laoreet ultricies. Aliquam eu tristique turpis. Morbi mollis egestas quam, vulputate auctor nisl viverra et. Ut commodo velit vel dignissim lacinia</p>
             </div>
           </div>
         </div>
@@ -81,8 +79,7 @@
             </div>
             <div class="probootstrap-card-text">
               <h2 class="probootstrap-card-heading">Affordable Houses</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-              <p><a href="#">Find out more</a></p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius non arcu ut interdum. Proin a nunc a metus facilisis mattis. Maecenas placerat bibendum dui, eget lobortis urna laoreet ultricies. Aliquam eu tristique turpis. Morbi mollis egestas quam, vulputate auctor nisl viverra et. Ut commodo velit vel dignissim lacinia</p>
             </div>
           </div>
         </div>
@@ -166,6 +163,10 @@
                   <li>
                     Garages
                     <span>{{property.garages_number}}</span>
+                  </li>
+                     <li>
+                    Location
+                    <span>{{property.location}}</span>
                   </li>
                 </ul>
               </div>

@@ -30,3 +30,9 @@ urlpatterns = [
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+
+admin.site.site_header = "Houses and Apartments for Sale or Rent"
+admin.site.site_title = "Houses and Apartments for Sale or Rent"
+admin.site.site_index_title = "Welcome To Houses and Apartments for Sale or Rent"

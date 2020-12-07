@@ -3,8 +3,8 @@ from django.db import models
 # Create your models here.
 
 property_type = (
-    ('sale' , "sale"),
-    ('rent' , "rent")
+    ('sale', "sale"),
+    ('rent', "rent")
 )
 
 class Property(models.Model):
@@ -17,6 +17,7 @@ class Property(models.Model):
     baths_number = models.PositiveIntegerField()
     garages_number = models.PositiveIntegerField()
     image = models.ImageField(upload_to='property/' , null=True)
+    location = models.CharField(max_length=50, null=True)
 
     def __str__(self):
         return self.name
