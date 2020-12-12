@@ -32,7 +32,7 @@
                   <button class="btn btn-success" type="submit"><i class="icon-magnifying-glass t2"></i> Start Search</button>
                 </div>
               </form>
-              <p class="mb0 text-left"><small>A free HTML5 template by <a href="https://uicookies.com/">uicookies.com</a> under license <a href="https://uicookies.com/license">Creative Commons 3.0</a></small> </p>
+              
             </div>
 
           </div>
@@ -94,21 +94,19 @@
   <section class="probootstrap-section">
     <div class="container">
       <div class="row heading">
-        <h2 class="mt0 mb50 text-center">Explore Our Top Cities</h2>
+        <h2 class="mt0 mb50 text-center">Number Of Properties By Cities:</h2>
       </div>
       <div class="row probootstrap-gutter10">
         {% for category_list in category_list_home %}
 
                               
           <div class="col-md-6 col-sm-6">
-            <a href="#" class="probootstrap-hover-overlay">
-            
-              <img src="{{category_list.image.url}}" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+
               <div class="probootstrap-text-overlay">
                 <h3>{{category_list.category_name}}</h3>
                 <p>{{category_list.property_count}} Properties</p>
               </div>
-            </a>
+           
           </div>
          {% endfor %}
 
@@ -265,4 +263,5 @@
       </div>
     </div>
   </section>
+  
   {% endblock body %}

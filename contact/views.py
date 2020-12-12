@@ -21,7 +21,7 @@ def send_mail(request):
             message = contact_form.cleaned_data['message']
 
             try : 
-                sm(subject, message, from_email, ['test@gmail.com'])
+                sm(subject, message, from_email, ['olinagy26@gmail.com'])
             
             except BadHeaderError : 
                 return HttpResponse('invalid header')
