@@ -130,12 +130,12 @@
           <div class="col-md-4 col-sm-6">
             <div class="probootstrap-card probootstrap-listing">
               <div class="probootstrap-card-media">
-              
+            
                 <img href="{% url 'property:property_list' %}" src="{{property.image.url}}" class="img-responsive" alt="Free HTML5 Template by uicookies.com">
                
               </div>
               <div class="probootstrap-card-text">
-                <h2 class="probootstrap-card-heading"><a href="#">{{property}}</a></h2>
+                <h2 class="probootstrap-card-heading"><a href="{% url 'property:property_detail' property.id %}">{{property}}</a></h2>
                 <div class="probootstrap-listing-location">
                   <i class="icon-location2"></i> <span>{{property.location}}</span>
                 </div>
