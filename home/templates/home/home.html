@@ -99,20 +99,18 @@
       <div class="row probootstrap-gutter10">
         {% for category_list in category_list_home %}
 
-                                
+                              
           <div class="col-md-6 col-sm-6">
             <a href="#" class="probootstrap-hover-overlay">
             
-              <img src="media/{{category_list.image}}" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
+              <img src="{{category_list.category_name.image.url}}" alt="Free Bootstrap Template by uicookies.com" class="img-responsive">
               <div class="probootstrap-text-overlay">
                 <h3>{{category_list.category_name}}</h3>
                 <p>{{category_list.property_count}} Properties</p>
               </div>
             </a>
           </div>
-
-
-        {% endfor %}
+         {% endfor %}
 
       </div>
     </div>
