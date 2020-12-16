@@ -1,4 +1,4 @@
-# Restaurant page made with django and python.
+# Estate Agency site made with django and python.
 
 ---
 
